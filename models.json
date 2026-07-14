@@ -1,0 +1,17 @@
+{
+  "manifestVersion": 1,
+  "updated": "2026-07-13",
+  "comment": "Model-update manifest for Planner App. The app checks this when Settings opens and offers newer versions of INSTALLED models (approval-first, never automatic). Bump a model's 'version' only after the benchmark gate in docs/MODEL-UPDATES.md passes. 'id' must match an AsrModel id in transcriber.dart; version must be an integer greater than the previous one; sha256 is required for single-file ggml models.",
+  "models": [
+    {
+      "id": "ggml-punjabi-medium",
+      "version": 2,
+      "label": "Punjabi specialist (Whisper medium fine-tune, q5)",
+      "sizeLabel": "~515 MB",
+      "files": ["ggml-punjabi-medium-q5_0.bin"],
+      "url": "https://github.com/JSS13131313/planner-models/releases/download/v1/ggml-punjabi-medium-q5_0.bin",
+      "sha256": "aeae032650eabe970ef02edff66fad99a57c1abe885d4ac19963a1f49a334aa9",
+      "notes": "q5_0 quantization of DevOG/whisper-punjabi-medium. Benchmark 2026-07-13: CER 0.418 vs 0.447 f16 on the 25s ground-truth clip (app-style chunking); ~37s on-device inference vs 5-10+ min f16."
+    }
+  ]
+}
